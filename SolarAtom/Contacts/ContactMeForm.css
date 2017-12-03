@@ -1,0 +1,195 @@
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+.form-container {
+  padding-top: 30px;
+  width: 40vw;
+  min-width: 300px;
+  height: 400px;
+  font-family: "Inconsolata", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.3em;
+  color: #94c0dc;
+}
+
+.contact-label, .contact-text,
+.contact-email,
+.contact-textarea {
+  border-radius: 5px;
+}
+
+.contact-form {
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #18222d, #1a2530);
+  background: linear-gradient(to right, #18222d, #1a2530);
+  box-shadow: inset 3px 3px 15px -5px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  display: block;
+}
+
+.contact-label, .contact-input,
+.contact-textarea {
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.contact-label:hover, .contact-input:hover,
+.contact-textarea:hover {
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+legend {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  color: #2980b9;
+}
+
+.contact-label {
+  -webkit-transform: translateX(10%) translateY(-130%);
+          transform: translateX(10%) translateY(-130%);
+  background: rgba(26, 37, 48, 0.5);
+  border: 1px solid rgba(41, 128, 185, 0.5);
+  padding: 0 1em 0;
+  display: inline-block;
+  cursor: default;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+.contact-message {
+  -webkit-transform: translateX(10%) translateY(-230%);
+          transform: translateX(10%) translateY(-230%);
+}
+
+.contact-input,
+.contact-textarea {
+  font-size: 100%;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  outline: none;
+  border: 1px solid #2980b9;
+  background: #1a2530;
+  box-shadow: inset 3px 3px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact-input:focus + .contact-label,
+.contact-input.active + .contact-label {
+  background: #2980b9;
+  -webkit-transform: translateX(-25%) translateY(-250%);
+          transform: translateX(-25%) translateY(-250%);
+}
+
+.contact-textarea:focus + .contact-label,
+.contact-textarea.active + .contact-label {
+  background: #2980b9;
+  -webkit-transform: translateX(-25%) translateY(-350%);
+          transform: translateX(-25%) translateY(-350%);
+}
+
+::-webkit-input-placeholder {
+  color: rgba(41, 128, 185, 0.3);
+}
+
+.contact-text,
+.contact-email,
+.contact-textarea {
+  border: none;
+  background: inherit;
+  color: #94c0dc;
+  border: 1px solid rgba(41, 128, 185, 0.3);
+  padding: 1em 0.5em 0.5em;
+  width: 100%;
+  -webkit-filter: blur(5px);
+}
+.contact-text:focus, .contact-text.active,
+.contact-email:focus,
+.contact-email.active,
+.contact-textarea:focus,
+.contact-textarea.active {
+  -webkit-filter: blur(0px);
+}
+
+.contact-btn-wrapper {
+  width: 130px;
+}
+
+.contact-btn-wrapper span {
+  font-size: 15px;
+}
+
+.contact-btn  {
+  color: #FFF;
+  border-radius: 2px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.contact-btn .contact-btn-text {
+  position: relative;
+  letter-spacing: 2px;
+  left: 10px;
+  bottom: 5px;
+}
+
+.contact-btn .contact-btn-send {
+  display: none;
+}
+
+.contact-btn i {
+  left: 5px;
+  font-size: 20px;
+  color: #FFF;
+  z-index: 10;
+  transition:all 0.2s;
+}
+
+.contact-btn:not(.contact-btn-send):hover i {
+  transform:rotateZ(20deg);
+}
+
+.contact-btn.contact-btn-send .contact-btn-text {
+  transition:all 0.5s;
+  display:none;
+}
+
+.contact-btn.contact-btn-send .contact-btn-send {
+  opacity: 1;
+  display: inline-block;
+  position: relative;
+  left: 25%;
+  bottom: 5px;
+  transform: translateX(-50%);
+}
+
+.contact-btn.contact-btn-send .contact-btn-icon {
+  animation: flysend 2s;
+  position: relative;
+  bottom: 5px;
+}
+
+.contact-btn.contact-btn-send i {
+  top: 5px;
+  animation: flyspin 2s;
+}
+
+@keyframes flyspin {
+  0%{transform: rotateZ(-20deg);}
+  75%{transform: rotateZ(40deg);}
+  100%{transform: rotateZ(40deg);}
+}
+
+@keyframes flysend {
+  0%{left: 20px;}
+  75%{left: -100px;}
+  100%{left: 100px;}
+}
+
+@keyframes blink {
+  0%{opacity: 0;}
+  50%{opacity: 1;}
+  100%{opacity: 0;}
+}
